@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title>eventhandlere practice</title>
+
+    <style>
+        p {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body onload="testOnLoad()">
+
+    <!--Oppgave
+Test ut ondblclick, oncontextmenu og onkeydown på samme måte. Endre programmet så det logger til konsollet (console.log) istedenfor å vise på selve websiden. -->
+
+    <p ondblclick="dbc()">Double click me!</p>
+    <p id="dbc"></p>
+    <div oncontextmenu="myFunction()" contextmenu="mymenu">
+        <p>Right click for Context menu</p>
+    </div>
+
+    <input type="text" onchange="testOnChange()" oninput="testOnInput()" />
+    <h3 onmouseover="testOnMouseOver()" onmouseout="testOnMouseOut()">Test test test</h3>
+    <p>onkeydown</p>
+    <input type="text" onkeydown="onkeyFunction()">
+    <br>
+    <a href="https://www.w3schools.com/jsref/dom_obj_event.asp">Mer informasjon her</a>
+    <script>
+        function testOnLoad() {
+            console.log("onload");
+        }
+
+        function testOnChange() {
+            console.log("onchange");
+        }
+
+        function testOnInput() {
+            console.log("oninput");
+        }
+
+        function testOnMouseOver() {
+            console.log("onmouseover");
+        }
+
+        function testOnMouseOut() {
+            console.log("onmouseout");
+        }
+        function dbc() {
+            document.getElementById('dbc').innerHTML = "DoubleClicked"
+            console.log("ondblclick");
+        }
+        function myFunction() {
+            alert("you Right-Clicked");
+            console.log("oncontextmenu");
+        }
+        function onkeyFunction() {
+            alert("You pressed a key inside the input field");
+            console.log("onkeydown");
+        }
+
+
+    </script>
+</body>
+
+</html>

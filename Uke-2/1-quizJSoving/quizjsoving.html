@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSøving</title>
+    <style>
+        p {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>I hvilken amerikansk delstat ligger Grand Canyon?</h1>
+    <h2>Klikk på svaret du tror er riktig.</h2>
+    <!--Satt opp slik at hvert  funker hver for seg.-->
+    <p id="a1" onclick="doSomething1()">Arizona</p>
+    <p id="a2" onclick="doSomething2()">Florida</p>
+    <p id="a3" onclick="doSomething3()">California</p>
+
+    <!--Knapp som viser alle svar alternativer ved trykk på knapp-->
+    <button onclick="doSomething()">Vis Svar</button>
+
+
+    <script>
+        /.Viser svar alternativer hver for seg./
+        function doSomething1() {
+            document.getElementById('a1').innerHTML = 'Arizona - Riktig';
+        }
+        function doSomething2() {
+            document.getElementById('a2').innerHTML = 'Florida - Feil';
+        }
+        function doSomething3() {
+            document.getElementById('a3').innerHTML = 'California - Feil';
+        }
+        /.Knapp som viser alle svar alternativer ved trykk på knapp./
+        function doSomething() {
+            document.getElementById('a1').innerHTML = 'Arizona - Riktig';
+            document.getElementById('a2').innerHTML = 'Florida - Feil';
+            document.getElementById('a3').innerHTML = 'California - Feil';
+        }
+
+
+
+    </script>
+
+
+</body>
+
+</html>

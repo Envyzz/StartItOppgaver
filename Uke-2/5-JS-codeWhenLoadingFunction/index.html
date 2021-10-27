@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body onload="pageLoaded()">
+
+
+    <p>Ferdighet 5 - Kode som kjøres når siden lastes vs kode i en funksjon</p>
+
+    <div id="a">Tid for og loade siden</div>
+    <div id="aa">Når siden er Loadet</div>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Two_Elephants_in_Addo_Elephant_National_Park.jpg" alt="Stor elefant">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Two_Elephants_in_Addo_Elephant_National_Park.jpg" alt="Stor elefant">
+
+
+    <script>
+        document.getElementById('a').innerHTML = ' Tid for og loade siden ' + new Date().toTimeString(); {}
+
+        function pageLoaded() {
+        document.getElementById('aa').innerHTML = 'Når siden er loadet ' + new Date().toTimeString();
+        console.log(pageLoaded)
+        }
+
+
+
+    </script>
+    
+</body>
+</html>
+
+
+<!--Lag en enkel html-side som legger til tekst i en div både direkte i script-taggen og via en funksjon som blir kalt fra body sin onload-event. Logg tidspunktet for begge deler vha. denne koden: document.getElementById('a').innerHTML = '' + new Date().toTimeString();
+ Legg inn et stort bilde på websiden og se hvordan dette påvirker tidene. Husk å reloade siden med ctrl-f5 for å tvinge den til å laste inn bildet - og ikke bare hente det fra cache. -->

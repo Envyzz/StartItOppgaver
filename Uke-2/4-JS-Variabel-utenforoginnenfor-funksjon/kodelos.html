@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kodelås</title>
+    <style>
+        table,
+        tr,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            background-color: darkgrey;
+        }
+        h1 {
+            text-align: center;
+
+        }
+        div {
+            border: 1px solid black;
+            max-width: 78px;
+            background-color: darkgrey;
+        }
+        button {
+            background-color: darkkhaki;
+        }
+    </style>
+
+    <script>
+        var code = "";
+        function addDigit(number) {
+            code += number;
+            document.getElementById("output").innerHTML = code;
+        }
+        function resetCode() {
+            code = "";
+            document.getElementById("output") = code;
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>Code Lock</h1>
+    <div id="output" style="min-height: 20px;"></div>
+    <table>
+        <tr>
+            <td><button onclick="addDigit(this.innerHTML)">1</button></td>
+            <td><button onclick="addDigit(this.innerHTML)">2</button></td>
+            <td><button onclick="addDigit(this.innerHTML)">3</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="addDigit(this.innerHTML)">4</button></td>
+            <td><button onclick="addDigit(this.innerHTML)">5</button></td>
+            <td><button onclick="addDigit(this.innerHTML)">6</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="addDigit(this.innerHTML)">7</button></td>
+            <td><button onclick="addDigit(this.innerHTML)">8</button></td>
+            <td><button onclick="addDigit(this.innerHTML)">9</button></td>
+        </tr>
+    </table>
+    <button onclick="resetCode()">RESET</button>
+
+
+</body>
+
+</html>
+<!--Oppgave
+Lag en “kodelås” med 9 knapper. Vi tenker oss at for å låse opp må man trykke på knapp 3, så knapp 8, så knapp 1 og så knapp 2. Vi får ikke gjort dette helt ferdig ennå, for vi har ikke lært if-setninger, men vis i en egen div alle tallene som er trykket på så langt. Det vil si at om man har trykket først 1, så 2 og så 3, skal teksten "1-2-3" vises i en div på skjermen. -->

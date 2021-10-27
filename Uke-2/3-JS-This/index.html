@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Ferdighet 3 - spesialtilfelle, this og gjøre noe med det elementet man trykker på (eller som utløser eventet)</p>
+    Samenlign dette eksempelet med "Ferdighet 2 - Onclick - kjøre funksjon som endrer innerHTML ut fra Id"!
+    <h2 id="z" onclick="doSomething(this)">AAAAAAAAAAAAAAAA</h2>
+    <h2 id="y" onclick="doSomething(this)">BBBBBBBBBBBBBBBB</h2>
+
+
+    <table>
+        <tr>
+            <th>qweqweqwe</th>
+            <th>qweqweqwe</th>
+            <th>qweqweqwe</th>
+          </tr>
+        <tr>
+            <td onmouseover="showX(this)" onmouseleave="resetO(this)">o</td>
+            <td onmouseover="showX(this)" onmouseleave="resetO(this)">o</td>
+            <td onmouseover="showX(this)" onmouseleave="resetO(this)">o</td>
+        </tr>
+        <tr>
+            <td onmouseover="showX(this)" onmouseleave="resetO(this)">o</td>
+            <td onmouseover="showX(this)" onmouseleave="resetO(this)">o</td>
+            <td onmouseover="showX(this)" onmouseleave="resetO(this)">o</td>
+        </tr>
+    </table>
+    <p>On mouseover show X, on mouseleave show O</p>
+
+    <script>
+        function doSomething(etNavnDuVelgerSelv) {
+            // Nå er etNavnDuVelgerSelv det samme som om vi hadde kjørt:
+            // var etNavnDuVelgerSelv = document.getElementById('z');
+            // eller
+            // var etNavnDuVelgerSelv = document.getElementById('y');
+            // HVIS og bare hvis du trykker på akkurat det elementet som har id=z
+            etNavnDuVelgerSelv.innerHTML = 'CCCCCCCCCCCCCCCC';
+        }
+        function showX(element) {
+            element.innerHTML = 'x'
+        }
+        function resetO(element) {
+            element.innerHTML = 'o'
+        }
+    </script>
+</body>
+
+</html>
+
+
+
+
+<!--Oppgave
+Denne html-koden lager en tabell med to rader og to celler: <table><tr><td>o</td><td>o</td></tr><tr><td>o</td><td>o</td></tr></table>
+Utvid tabellen med flere rader og flere kolonner. Sørg så for at når man har musepekeren over en celle, så endrer innholdet seg fra o til x. -->
