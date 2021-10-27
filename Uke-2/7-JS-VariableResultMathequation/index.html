@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p>Ferdighet 7 - Sette variabel til resultat av et regnestykke. </p>
+
+    <input id="tallA" type="range" min="1" max="1000" step="1" oninput="updateDiv()" value="2" />
+    <input id="tallB" type="range" min="1" max="1000" step="1" oninput="updateDiv()" value="2" />
+    <div id="sliderOutput"></div>
+    <div id="resultat"></div>
+    <script>
+        var resultatDiv = document.getElementById('resultat');
+        var tallAInput = document.getElementById('tallA');
+        var tallBInput = document.getElementById('tallB');
+        var sliderOutput = document.getElementById('sliderOutput')
+
+
+        /*function calculate() {
+            var tallA = parseInt(tallAInput.value);
+            var tallB = parseInt(tallBInput.value);
+            var sum = tallA + tallB;
+            var differense = tallA - tallB;
+            var produkt = tallA * tallB;
+            var kvotient = tallA / tallB;
+            resultatDiv.innerHTML = '' +
+                tallA + '+' + tallB + '=' + sum + '<br/>' +
+                tallA + '-' + tallB + '=' + differense + '<br/>' +
+                tallA + '*' + tallB + '=' + produkt + '<br/>' +
+                tallA + '/' + tallB + '=' + kvotient; 
+        
+        } */
+        function updateDiv() {
+            var tallA = parseInt(tallAInput.value);
+            var tallB = parseInt(tallBInput.value);
+            sliderOutput.innerHTML = "<div style='" 
+            + "background-color: cyan;"
+            + "width:"+tallA+"px;"
+            + "height:"+tallB+"px;'>"
+            + "areal=" + (tallA * tallB)
+            + "<br>omkrets=" + (tallA * 2 + tallB * 2)
+            +
+            "</div>";
+            }
+    </script>
+</body>
+</html>
+
+<!--Lag en slider for å velge bredde fra 1 til 1000 og en slider for å velge høyde fra 1 til 1000. Vis en div med valgt bredde og høyde - og legg inn tekst i diven som viser arealet (bredde*høyde) og omkretsen (2*bredde+2*høyde).-->
